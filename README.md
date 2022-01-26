@@ -1,2 +1,3 @@
-# react-ssr-example
-Created with CodeSandbox
+# react-ssr-example 🐔
+
+A simple React server-side rendering example using express and esbuild
