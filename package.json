@@ -3,16 +3,12 @@
   "version": "1.0.0",
   "description": "Node.js example server starter project",
   "scripts": {
-    "start": "node ./index.js",
-    "build": "node build.js"
+    "build:client": "esbuild src/index.js --bundle --outfile=dist/bundle.js --loader:.js=jsx",
+    "build:server": "esbuild server/server.jsx --bundle --outfile=build/server.js --platform=node",
+    "build": "npm run build:client && npm run build:server",
+    "start": "node ./build/server.js"
   },
   "dependencies": {
-    "@babel/cli": "7.16.8",
-    "@babel/core": "7.16.12",
-    "@babel/preset-env": "7.16.11",
-    "@babel/preset-react": "7.16.7",
-    "@babel/register": "7.16.9",
-    "babel-loader": "8.2.3",
     "esbuild": "0.14.13",
     "express": "4.17.2",
     "react": "17.0.2",
