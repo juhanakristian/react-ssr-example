@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Node.js example server starter project",
   "scripts": {
-    "build:client": "esbuild src/index.js --bundle --outfile=dist/bundle.js --loader:.js=jsx",
+    "build:client": "esbuild src/index.js --bundle --outfile=build/dist/bundle.js --loader:.js=jsx",
     "build:server": "esbuild server/server.jsx --bundle --outfile=build/server.js --platform=node",
     "build": "npm run build:client && npm run build:server",
     "start": "node ./build/server.js"
